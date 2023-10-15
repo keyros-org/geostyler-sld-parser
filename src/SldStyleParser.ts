@@ -1739,13 +1739,13 @@ export class SldStyleParser implements StyleParser<string> {
         case 'png':
         case 'jpeg':
         case 'gif':
-          graphic[0][ExternalGraphic][0][Format] = [`image/${iconExt}`];
+          graphic[0][ExternalGraphic][1] = { [Format]:  [{ '#text': `image/${iconExt}` }] };
           break;
         case 'jpg':
-          graphic[0][ExternalGraphic][0][Format] = ['image/jpeg'];
+          graphic[0][ExternalGraphic][1] = { [Format]:  [{ '#text': `image/jpeg` }] };
           break;
         case 'svg':
-          graphic[0][ExternalGraphic][0][Format] = ['image/svg+xml'];
+          graphic[0][ExternalGraphic][1] = { [Format]:  [{ '#text': `image/svg+xml` }] };
           break;
         default:
           break;
